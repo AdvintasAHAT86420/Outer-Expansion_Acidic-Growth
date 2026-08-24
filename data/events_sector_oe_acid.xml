@@ -2478,7 +2478,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 		<choice hidden="true">
 			<text>Investigate.</text>
 			<event>
-				<text>Finally you find the location of the distress beacon, theres a severely damage Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
+				<text>Finally you find the location of the distress beacon, theres a severely damaged Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
 				<choice hidden="true">
 					<text>Two.</text>
 					<event load="OE_ACID_DISTRESS_QUESTION_TRUE" />
@@ -2503,7 +2503,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 		<choice hidden="true">
 			<text>Investigate.</text>
 			<event>
-				<text>Finally you find the location of the distress beacon, theres a severely damage Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
+				<text>Finally you find the location of the distress beacon, theres a severely damaged Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
 				<choice hidden="true">
 					<text>Two.</text>
 					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
@@ -2528,7 +2528,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 		<choice hidden="true">
 			<text>Investigate.</text>
 			<event>
-				<text>Finally you find the location of the distress beacon, theres a severely damage Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
+				<text>Finally you find the location of the distress beacon, theres a severely damaged Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
 				<choice hidden="true">
 					<text>Two.</text>
 					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
@@ -3306,7 +3306,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 	<status type="limit" target="player" system="sensors" amount="0" />
     <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
-	<text>This beacon is embed deeply within the Acidic Growth, and as such it's unsuprising when an Acidic vessel appears from the mist to attack.</text>
+	<text>This beacon is embed deeply within the Acidic Growth, and as such it's unsurprising when an Acidic vessel appears from the mist to attack.</text>
 	<ship load="SHIP_OE_ACID_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>

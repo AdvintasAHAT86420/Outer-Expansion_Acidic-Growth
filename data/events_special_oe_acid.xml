@@ -243,16 +243,6 @@
 			</choice>
 		</event>
 	</choice>
-	<choice>
-		<text>Convince it you only have good intentions.</text>
-		<event>
-			<text>The Acidic Growth recognises your donation and lets you pass.</text>
-            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
-			<item_modify>
-				<item type="scrap" min="-80" max="-80" />
-			</item_modify>
-		</event>
-	</choice>
 	<choice hidden="true">
 		<text>Suggest a monetary bribe.</text>
 		<event>
