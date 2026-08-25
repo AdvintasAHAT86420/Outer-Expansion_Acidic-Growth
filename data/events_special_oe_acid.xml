@@ -578,9 +578,10 @@
 <eventList name="STORELIST_OE_ACID">
 	<event load="STOREEVENT_OE_ACID_ORCHID" />
 	<event load="STOREEVENT_OE_ACID_ORCHID" />
-<!--
+
 	<event load="STOREEVENT_OUTPOST" />
 	<event load="STOREEVENT_DAMAGED" />
+<!--
 	
 	<event load="STOREEVENT_FED_MARKET" />
 	
@@ -593,16 +594,14 @@
 
 <eventList name="NEBULA_STORELIST_OE_ACID">
 	<event load="NEBULA_STOREEVENT_OE_ACID_NO2" />
-	<event load="NEBULA_STOREEVENT_OE_ACID_NO2" />
 
 	<event load="NEBULA_STOREEVENT_OE_ACID_CIVILIAN" />
-	<event load="NEBULA_STOREEVENT_OE_ACID_CIVILIAN" />
 
+	<event load="NEBULA_ACIDIC_STOREEVENT_OE_ACID" />
+
+	<event load="NEBULA_STOREEVENT_DAMAGED" />
 <!--
-	<event load="NEBULA_STOREEVENT_DAMAGED" />
-	<event load="NEBULA_STOREEVENT_DAMAGED" />
 	
-	<event load="NEBULA_STOREEVENT_FED_OUTPOSTDAMAGE" />
 	<event load="NEBULA_STOREEVENT_FED_OUTPOSTDAMAGE" />
 	
 	<event load="NEBULA_STOREEVENT_PIRATE_ODDSHOP" />
@@ -749,6 +748,35 @@
 					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
 				</event>
 			</choice>
+			<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1">
+				<text>(Positive Gathering-Growth reputation) Ask if they have anything special.</text>
+				<event>
+					<text>One of the Acidic engineers perks up. "Outsider, wants special? Usually, not sharing freely. Outsider, an ally: permission granted. Continue after us."
+The Worker leads you further into the storage, towards a strange Orchid clad in a lab coat. They seem to inherit traits from both Orchids and Vampweeds; not something you see frequently.</text>
+					<choice hidden="true">
+						<text>Cough to get their attention.</text>
+						<event>
+							<text>"Unit 102, what's the reaso- oh, I see there are guests. I infer we can trust them?" Worker mimics an affirming gesture. "Right, right. I assume you're here to get a Life Bloom system installed? It's a product of the Gathering and the Growth's close relations. Don't worry, for friends, it's free. Just make sure you don't need your Life Support system, as those are not compatible - regular human breathing air is not the best for the Bloom."</text>
+							<choice req="oe_growth" lvl="1" max_group="1" hidden="true">
+								<text>You already have the Life Bloom system.</text>
+								<event load="OPTION_INVALID"/>
+							</choice>
+							<choice req="oe_growth" lvl="0" max_lvl="0" max_group="1">
+								<text>Install the Life Bloom system.</text>
+								<event>
+									<text>"Ah, most wonderful. Continue on shopping, we'll set up the system in the meanwhile".</text>
+									<system name="oe_growth"/>
+									<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+								</event>
+							</choice>
+							<choice hidden="true">
+								<text>Politely Decline.</text>
+								<event load="STORE_LOAD_OE_ACID" />
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
 			<choice hidden="true">
 				<text>Just shop.</text>
 				<event load="STORE_LOAD_OE_ACID" />
@@ -809,7 +837,8 @@
 
 
 <ship name="SHIP_OE_ACID_STATION_STORE" auto_blueprint="OE_ACID_STATION">
-
+	<destroyed load="DESTROYED_OE_ACID"/>
+	<deadCrew load="DEAD_CREW_OE_ACID"/>
 </ship>
 
 <event name="NEBULA_STOREEVENT_OE_ACID_CIVILIAN" unique="true">
@@ -837,6 +866,133 @@
 		<text>Ignore the store.</text>
 		<event>
 			<text>You decide that dubious sales aren't for you.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_ACIDIC_STOREEVENT_OE_ACID" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_oe_store_acidic" global="false">
+		<color r="138" g="237" b="31" a="1"/>
+		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+	</beaconType>
+	<status type="limit" target="player" system="sensors" amount="0" />
+	<text>You arrive at a beacon shrouded in a thick acidic nebula. The only discernable thing is a flickering light not far away, which also seems to be where a hail is currently coming from.</text>
+	<choice hidden="true">
+		<text>Hear them out.</text>
+		<event>
+			<text>"This is an advertisement. Urgent sale. Acidic Growth equipment. All organisms and/or machines are welcome. This is the end of the advertisement."</text>
+			<choice hidden="true">
+				<text>What do you have?</text>
+				<event load="STORE_LOAD_OE_ACID" />
+			</choice>
+			<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1">
+				<text>(Positive Gathering-Growth reputation) Ask if they have anything special.</text>
+				<event>
+					<text>"Renegade. Friend of the Growth. Take weapon. On the house." The vessel transfers you a free weapon.</text>
+					<weapon name="GIFTLIST_WEAPONS_OE_ACIDIC"/>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Doesn't seem like you see much business.</text>
+				<event>
+					<text>The ship takes a while to respond. "More true than preferred. Long time. No customers. Need to go to the shipyard. Instead waiting."</text>
+					<choice hidden="true">
+						<text>Maybe we can help.</text>
+						<event>
+							<text>"You can help. Help advertise." The vessel transfers you a list of possible advertisements - each one less appealing than the last.</text>
+							<choice hidden="true">
+								<text>Let's just wing this.</text>
+								<event>
+									<text>You spend a while beaming various types of advertisements around - from infomercials on the advantages of Acidic weaponry, to thinly veiled threats of violence to anyone who doesn't stop to shop.</text>
+									<modifyPursuit amount="1"/>
+									<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="0" blue="false">
+										<text>Continue...</text>
+										<event>
+											<text>With the more gentle ad ideas proving more reliable, the Growth's store gets a couple of customers, which is a couple more than it did without your intervention. Other ideas, such as death threats and a store-themed cover of a popular song, didn't work out as well, although one customer did find their way to the shop after an especially swear-filled ad about the dangers of not having enough guns.
+
+The Growth thanks you for dedicating this time to help it, and offers you a reward for your troubles.</text>
+											<autoReward level="MED">standard</autoReward>
+											<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
+											<choice>
+												<text>Continue...</text>
+												<event load="STORE_LOAD_OE_ACID"/>
+											</choice>
+										</event>
+									</choice>
+									<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="1" blue="false">
+										<text>Continue...</text>
+										<event>
+											<text>But no matter what you try, be it singing your lungs out on the mic or getting on your knees on a passing vessel's vidscreens, no one comes to the shop. Most explain their refusal with you having accumulated a sort of notoriousness around these parts, and one guy claiming he would've definitely shopped "if your mug wasn't so ugly".
+
+Still, despite your failure, the Growth decides that your efforts are still commendable, and offers to forgive some of your sins in exchange.</text>
+											<autoReward level="MED">standard</autoReward>											
+											<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
+											<choice>
+												<text>Continue...</text>
+												<event load="STORE_LOAD_OE_ACID"/>
+											</choice>
+										</event>
+									</choice>
+								</event>
+							</choice>
+							<choice hidden="true">
+								<text>Can't spare the time, sorry.</text>
+								<event>
+									<text>"Understandable. Regrettable."</text>
+									<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+								</event>
+							</choice>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Tough.</text>
+						<event>
+							<text>The vessel doesn't respond to the remark.</text>
+							<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>No thank you.</text>
+				<event>
+					<text>You decide to return to the beacon.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK" />
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>The sooner we get out - the better.</text>
+		<event>
+			<text>You decide that straying away from the beacon in such a low vision environment is a bad idea.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event />
+			</choice>
 		</event>
 	</choice>
 </event>

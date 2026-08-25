@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FTL>
+<text name="oe_lua_reputation_acid_orchid">Gathering-Growth Reputation</text>
+<text name="oe_lua_reputation_acid">Acidic Growth Reputation</text>
+
 <text name="map_icon_oe_acid_nebula">ACIDIC</text>
 <text name="map_icon_oe_acid_nebula_distress">DISTRESS</text>
 <text name="map_icon_oe_acid_nebula_core">ACIDIC CORE [!]</text>

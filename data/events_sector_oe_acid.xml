@@ -2050,7 +2050,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	<choice hidden="true">
 		<text>Respond to the Acidic ship.</text>
 		<event>
-			<text>You inquire on what "help" means. "Orchids, allies - but take us. Didn't ask. Negotiation, possible? We want us back." It seems like Orchids took a substantial mass of Acidic Growth and hold it at the station, but why?</text>
+			<text>You inquire on what "help" means. "Orchids, allies - but take us. More than was agreed on. Didn't listen. Negotiation, possible? We want us back." It seems like Orchids took a substantial mass of Acidic Growth and hold it at the station, but why?</text>
 			<choice hidden="true">
 				<text>Agree to help and contact the station.</text>
 				<event>
@@ -2059,48 +2059,54 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 					<choice hidden="true">
 						<text>What are YOU doing here?</text>
 						<event>
-							<text>The Orchid is not amused. "This is a research station, sanctioned by the Council. Topic of research: Acidic Growth and its interaction with grown weapons and ships; fertilizer efficiency enhancement. Now that your curiosity is satisfied, I hope we can part ways?"</text>
+							<text>The Orchid is not amused. "This is a research station, sanctioned by the Council. Topic of research: Acidic Growth and its interaction with grown weapons and ships; fertilizer efficiency enhancement. This was in agreement with Growth itself, by the way. Now that your curiosity is satisfied, I hope we can part ways?"</text>
 							<choice hidden="true">
-								<text>Demand they release the Growth.</text>
+								<text>They said they did not agree to that amount.</text>
 								<event>
-									<text>"And why should we do that? Listen, even if the research wasn't objectively for the best of both the Gathering and the Growth, we can't go against higher-ups." It doesn't seem like they plan to give it up willingly.</text>
+									<text>"Yes, we know. But with the impending threat of the Rebellion, we can't afford working slow. And asking the Core about this, well, will take days."</text>
 									<choice hidden="true">
-										<text>Attack them.</text>
+										<text>Demand they release the Growth.</text>
 										<event>
-											<ship hostile="true"/>
-											<text>You power up your weapons. The station responds, doing the same. Maybe if you make them surrender, they'll release the Growth?</text>
+											<text>"And why should we do that? Listen, even if the research wasn't objectively for the best of both the Gathering and the Growth, we can't go against higher-ups." It doesn't seem like they plan to give it up willingly.</text>
 											<choice hidden="true">
-												<text>Continue...</text>
-												<event load="COMBAT_CHECK" />
-											</choice>											
-										</event>
-									</choice>
-									<choice hidden="true" req="orchid_praetor">
-										<text>(Praetor Crew) We ARE the higher-ups.</text>
-										<event>
-											<text>The Orchid stutters. Now stuck between a rock and hard place, they decide it isn't worth the trouble holding onto Acidic Growth.</text>
-											<choice hidden="true">
-												<text>Continue...</text>
+												<text>Attack them.</text>
 												<event>
-													<text>While the Orchid station transports all the tanks of Growth back to the Acidic ship, the latter contacts you again. "Outsider, gratitude. Orchids - allies. You - ally. Future negotiation, with allies, possible. Accept this." Acidic Workers carry over a large amount of scrap.</text>
-													<autoReward level="HIGH">standard</autoReward>
-													<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
+													<ship hostile="true"/>
+													<text>You power up your weapons. The station responds, doing the same. Maybe if you make them surrender, they'll release the Growth?</text>
+													<choice hidden="true">
+														<text>Continue...</text>
+														<event load="COMBAT_CHECK" />
+													</choice>											
+												</event>
+											</choice>
+											<choice hidden="true" req="orchid_praetor">
+												<text>(Praetor Crew) We ARE the higher-ups.</text>
+												<event>
+													<text>The Orchid stutters. Now stuck between a rock and hard place, they decide it isn't worth the trouble holding onto Acidic Growth.</text>
+													<choice hidden="true">
+														<text>Continue...</text>
+														<event>
+															<text>While the Orchid station transports all the tanks of Growth back to the Acidic ship, the latter contacts you again. "Outsider, gratitude. Orchids - allies. You - ally. Future negotiation, with allies, possible. Accept this." Acidic Workers carry over a large amount of scrap.</text>
+															<autoReward level="HIGH">standard</autoReward>
+															<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
+														</event>
+													</choice>
+												</event>
+											</choice>
+											<choice hidden="true">
+												<text>Back down.</text>
+												<event>
+													<text>You decide this isn't worth it. And, isn't it for the good of everyone? You get ready to jump.</text>
 												</event>
 											</choice>
 										</event>
 									</choice>
 									<choice hidden="true">
-										<text>Back down.</text>
+										<text>Part ways, as suggested.</text>
 										<event>
-											<text>You decide this isn't worth it. And, isn't it for the good of everyone? You get ready to jump.</text>
+											<text>The last thing you want to do is piss off your allies. You get ready to jump.</text>
 										</event>
 									</choice>
-								</event>
-							</choice>
-							<choice hidden="true">
-								<text>Part ways, as suggested.</text>
-								<event>
-									<text>The last thing you want to do is piss off your allies. You get ready to jump.</text>
 								</event>
 							</choice>
 						</event>
@@ -3259,6 +3265,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 	<loadEventList first="false" generate="true">
 		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" />
 		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" />
+		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" />
 		<event load="NEBULA_OE_ACID_WARNING" />
 		<event name="NEBULA_ENCOUNTER_OE_ACID_STORM" />
 	</loadEventList>
@@ -3881,6 +3888,7 @@ The Growth transfers over some resources as payment for your data, and while tha
                             <item_modify>
 								<item type="scrap" min="-20" max="-20" />
                             </item_modify>
+							<augment name="OE_ACID_BILL_MET"/>
                             <variable name="coords_oe_bill" op="set" val="1" />
                             <variable name="unique_oe_bill" op="set" val="1" />
                         </event>

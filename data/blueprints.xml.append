@@ -774,6 +774,14 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<rarity>0</rarity>
 	<stackable>true</stackable>
 </augBlueprint>
+
+<augBlueprint name="OE_ACID_BILL_MET">
+	<title>Bill Met</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
 </FTL>
 
 <!--Weapons-->
