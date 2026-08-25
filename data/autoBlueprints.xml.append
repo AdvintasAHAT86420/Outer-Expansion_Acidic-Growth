@@ -847,6 +847,12 @@
 
 <FTL>
 <mod:findName type="blueprintList" name="LIST_WEAPONS_OE_SYLVAN">
+	<mod:findLike type="name">
+		<mod:selector>LASER_BURST_1</mod:selector>
+		<mod:removeTag/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_OE_SYLVAN">
 	<mod-append:name>OE_LASER_ACID_1</mod-append:name>
 	<mod-append:name>OE_LASER_ACID_1_ELITE</mod-append:name>
 	<mod-append:name>OE_LASER_ACID_2</mod-append:name>
@@ -859,6 +865,12 @@
 	<mod-append:name>OE_ION_ACID_1_ELITE</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_DRONES_OE_SYLVAN">
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_OE_LOOT">
+	<mod:findLike type="name">
+		<mod:selector>LASER_BURST_1</mod:selector>
+		<mod:removeTag/>
+	</mod:findLike>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_WEAPONS_OE_LOOT">
 	<mod-append:name>OE_LASER_ACID_SUPER</mod-append:name>
