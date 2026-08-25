@@ -455,7 +455,7 @@
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_CREW1" layout="oepc_acid_bill" img="oepc_acid_bill">
 	<class>Bill's Crewser</class>
 	<name>Salt Water</name>
-	<desc>Bill has made a few friends on his adventures since becoming an Acidic Outcast.</desc>
+	<desc>Bill has made a few friends on their adventures since becoming an Acidic Castaway.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_BILL_unlock" />
 	<systemList>
 		<oe_growth power="1" room="1" start="true" />

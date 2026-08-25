@@ -19,9 +19,9 @@ Locations of Interest: Central Acidic Shipyards
     
 The Acidic Origins are a dangerous place, only the most extreme ships survive the Acidic nebula, and that isn't even considering trying to survive the Acidic ships themselves.</text>
 
-<text name="ship_PLAYER_SHIP_OE_ACID_BILL_unlock">Consult the advice of a certain Acidic outcast about a certain artifact to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_OE_ACID_BILL_unlock">Consult the advice of a certain Acidic Castaway about a certain artifact to unlock this ship.</text>
 
-<text name="ship_PLAYER_SHIP_OE_ACID_ARTY_unlock">Help an Acidic outcast to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_OE_ACID_ARTY_unlock">Help an Acidic Castaway to unlock this ship.</text>
 <text name="ship_PLAYER_SHIP_OE_ACID_ARTY_2_unlock">Get to Sector 5 with the Acidic Cruiser Type A to unlock this ship.</text>
 <text name="ship_PLAYER_SHIP_OE_ACID_ARTY_3_unlock">Get to Sector 5 with the Acidic Cruiser Type B or beat the game with the Acidic Cruiser Type A to unlock this ship.</text>
 
