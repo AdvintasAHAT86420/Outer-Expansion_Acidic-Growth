@@ -5,7 +5,7 @@
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_ARTY" layout="oep_acid_arty_a" img="oep_acid_arty_a">
 	<class>Acidic Cruiser</class>
 	<name>The Alkaline</name>
-	<desc>Originating from the Acidic Growth, the vessel allowed the Growth to extend it's reach beyond the nebulas it formed in. So far only the orchids have brokered peace with the Acidic Growth. This ship has an upgraded oxygen system.</desc>
+	<desc>Originating from the Acidic Growth, the vessel allowed the Growth to extend it's reach beyond the nebulas it formed in. So far only the orchids have brokered peace with the Acidic Growth.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_ARTY_unlock" />
 	<systemList>
 		<oe_growth power="2" room="6" start="true" />
