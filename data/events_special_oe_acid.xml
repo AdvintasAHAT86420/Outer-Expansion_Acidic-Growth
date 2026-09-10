@@ -53,7 +53,7 @@
 			</item_modify>
 		</event>
 	</choice>
-	<choice req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1">
+	<choice req="rep_comb_oe_acid_orchid" lvl="1">
 		<text>(Positive Gathering-Growth reputation) Request entry.</text>
 		<event>
 			<text>The Acidic Growth recognizes you as an ally. You're free to enter.</text>
@@ -254,7 +254,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-2">
+	<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="2">
 		<text>(Positive Gathering-Growth reputation) Request entry.</text>
 		<event>
 			<text>You've made quite a name among Acidic Growth... even if it's not exactly clear if it's different consciousnesses or all just one, united whole. It lets you in.</text>
@@ -450,7 +450,7 @@
 	</quest>
 		<ship load="SHIP_GUARD_OE_ACIDHOME_PRAETOR" hostile="false" />
 	<text>Before you can even finish salvaging, a Praetor ship jumps in. Uh oh.</text>
-	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="1">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-1">
 		<text>Continue...</text>
 		<event>
 			<text>The Orchid vessel hails you. "Federation? Could you kindly explain what happened here? We got a distress call coming from the guard, and now we find the guard neutralized and you scrapping the wreck. You understand how this looks, right?"</text>
@@ -481,7 +481,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="2" max_lvl="9999">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="2">
 		<text>Continue...</text>
 		<event>
 			<text>It seems like your past crimes caught up with you. The Orchid vessel doesn't bother hailing you, and moves in to attack.</text>
@@ -618,7 +618,7 @@
 	</beaconType>
 	<ship load="SHIP_OE_ACID_STATION_STORE" hostile="false"/>
 	<text>This beacon is busy with Acidic and Gathering traffic, all centering around a Growth station. Orchids are your allies, so it won't be hard to gain access and ability to trade.</text>
-	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="2">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-2">
 		<text>Request access.</text>
 		<event>
 			<text>You're welcomed by a dapper Orchid who explains this is not only a trade hub, but also a diplomatic point. If you have good personal standing with either of the factions, you can request support.</text>
@@ -644,7 +644,7 @@
 					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>			
 				</event>
 			</choice>
-			<choice req="rep_oe_acid" lvl="-9999" max_lvl="-1">
+			<choice req="rep_oe_acid" lvl="1">
 				<text>(Positive Acidic Reputation) Ask for a discounted Acidic weapon.</text>
 				<event>
 					<text>After payment, a group of Acidic Workers brings out your new weapon. You move on to the store.</text>
@@ -655,7 +655,7 @@
 					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
 				</event>
 			</choice>
-			<choice req="rep_oe_acid" lvl="-9999" max_lvl="-3">
+			<choice req="rep_oe_acid" lvl="3">
 				<text>(Great Positive Acidic Reputation) Ask for a military-built Acidic construct contract.</text>
 				<event>
 					<text>After you pay and sign the contract, an Acidic Soldier comes aboard to join your crew. You move on to the store.</text>
@@ -673,7 +673,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="3" max_lvl="9999">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-3">
 		<text>Request access.</text>
 		<event>
 			<text>The station refuses all hails; it seems like they got a tip about your reputation. You're severely outnumbered, so your only choice is to move on.</text>
@@ -711,7 +711,7 @@
 	<ship load="SHIP_OE_ACID_STATION_STORE" hostile="false"/>
 	<environment type="nebula"/>
 	<text>It seems like Acidic Growth set up a store here.</text>
-	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="2">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-2">
 		<text>Hail.</text>
 		<event>
 			<text>An Acidic Soldier allows you to dock. The station is teeming with Workers, and you bump into several while searching for an open kiosk. The local engineers suggest, for a price, to either upgrade or dismantle your Life Support system.</text>
@@ -748,7 +748,7 @@
 					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
 				</event>
 			</choice>
-			<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1">
+			<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="1">
 				<text>(Positive Gathering-Growth reputation) Ask if they have anything special.</text>
 				<event>
 					<text>One of the Acidic engineers perks up. "Outsider, wants special? Usually, not sharing freely. Outsider, an ally: permission granted. Continue after us."
@@ -783,7 +783,7 @@ The Worker leads you further into the storage, towards a strange Orchid clad in 
 			</choice>
 		</event>
 	</choice>
-	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="3" max_lvl="9999">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-3">
 		<text>Hail.</text>
 		<event>
 			<text>The station refuses all hails. It seems the Growth isn't pleased with you.</text>
@@ -896,7 +896,7 @@ The Worker leads you further into the storage, towards a strange Orchid clad in 
 				<text>What do you have?</text>
 				<event load="STORE_LOAD_OE_ACID" />
 			</choice>
-			<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1">
+			<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="1">
 				<text>(Positive Gathering-Growth reputation) Ask if they have anything special.</text>
 				<event>
 					<text>"Renegade. Friend of the Growth. Take weapon. On the house." The vessel transfers you a free weapon.</text>
@@ -917,7 +917,7 @@ The Worker leads you further into the storage, towards a strange Orchid clad in 
 								<event>
 									<text>You spend a while beaming various types of advertisements around - from infomercials on the advantages of Acidic weaponry, to thinly veiled threats of violence to anyone who doesn't stop to shop.</text>
 									<modifyPursuit amount="1"/>
-									<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="0" blue="false">
+									<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="0" blue="false">
 										<text>Continue...</text>
 										<event>
 											<text>With the more gentle ad ideas proving more reliable, the Growth's store gets a couple of customers, which is a couple more than it did without your intervention. Other ideas, such as death threats and a store-themed cover of a popular song, didn't work out as well, although one customer did find their way to the shop after an especially swear-filled ad about the dangers of not having enough guns.
@@ -931,7 +931,7 @@ The Growth thanks you for dedicating this time to help it, and offers you a rewa
 											</choice>
 										</event>
 									</choice>
-									<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="1" blue="false">
+									<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1" blue="false">
 										<text>Continue...</text>
 										<event>
 											<text>But no matter what you try, be it singing your lungs out on the mic or getting on your knees on a passing vessel's vidscreens, no one comes to the shop. Most explain their refusal with you having accumulated a sort of notoriousness around these parts, and one guy claiming he would've definitely shopped "if your mug wasn't so ugly".

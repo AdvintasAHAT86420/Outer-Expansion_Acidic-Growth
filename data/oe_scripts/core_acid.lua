@@ -131,10 +131,22 @@ script.on_internal_event(Defines.InternalEvents.PRE_CREATE_CHOICEBOX, function(e
 		for _, rep in ipairs(repToShow) do
 			if not rep.hidden or Hyperspace.playerVariables[rep.id] ~= 0 then
 				local repVal = Hyperspace.playerVariables[rep.id]
-				local s = rep.name.." ["..math.floor(repVal).."]"
+				local s = rep.name.." ["..math.floor(-1 * repVal).."]"
 				local invalidEvent = eventManager:CreateEvent("OPTION_INVALID", 0, false)
 				event:AddChoice(invalidEvent, s, emptyReq, true)
 			end
 		end
+	end
+end)
+
+
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+	if weapon.blueprint and weapon.blueprint.name and weapon.blueprint.name == "ARTILLERY_COALITION_CEALAFORMER_ELITE" then
+		local spaceManager = Hyperspace.App.world.space
+		local bomb = spaceManager:CreateBomb(
+			weapon.blueprint,
+			projectile.ownerId,
+			Hyperspace.ships(projectile.ownerId):GetRandomRoomCenter(),
+			projectile.ownerId)
 	end
 end)

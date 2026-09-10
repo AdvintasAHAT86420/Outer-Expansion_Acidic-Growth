@@ -530,6 +530,39 @@
 
 <!--Artillery-->
 <FTL>
+<weaponBlueprint name="ARTILLERY_COALITION_CEALAFORMER_ELITE">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>Cealaformer Tube</title>
+	<short>Tube</short>
+	<locked>1</locked>
+	<desc>PLACEHOLDER</desc>
+	<tooltip>PLACEHOLDER</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<stun>0</stun>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>artillery_cealaformer_explosion</image>
+	<explosion>artillery_cealaformer_explosion</explosion>
+	<launchSounds>
+		<sound>miss</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>miss</sound>
+	</hitShipSounds>
+	<weaponArt>artillery_fed</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
 
 <weaponBlueprint name="OE_ARTILLERY_BEAM_ACID_1">
 	<type>BEAM</type>
@@ -1641,7 +1674,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 <!--Crew-->
 <FTL>
 <crewBlueprint name="oe_acid_worker">
-	<desc>A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech.</desc>
+	<desc>A mechanical worker controlled by a fragment of the Acidic Growth. This design focuses on ship management and repair.</desc>
 	<title>Acidic Worker</title>
 	<short>Acid Worker</short>
 	<cost>50</cost>
@@ -1657,7 +1690,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 </crewBlueprint>
 
 <crewBlueprint name="oe_acid_soldier">
-	<desc>Elite Acidic Crew. A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech.</desc>
+	<desc>Elite Acidic Crew. A mechanical soldier controlled by a fragment of the acidic growth. This design focuses on rebelling boarders and protecting itself.</desc>
 	<title>Acidic Soldier</title>
 	<short>Acid Soldier</short>
 	<cost>70</cost>
@@ -1673,7 +1706,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 </crewBlueprint>
 
 <crewBlueprint name="unique_oe_bill">
-	<desc>A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech. The fragments of Acidic Growth in this machine have become disconnected from the rest of the Acidic Growth and now consider themselves their own entity.</desc>
+	<desc>The fragments of Acidic Growth in this soldier have been isolated for a long time and now consider themselves their own entity.</desc>
 	<title>Castaway</title>
 	<short>Castaway</short>
 	<cost>100</cost>

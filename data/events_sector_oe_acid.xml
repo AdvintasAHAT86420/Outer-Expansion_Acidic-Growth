@@ -308,7 +308,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice req="rep_oe_acid" lvl="-9999" max_lvl="-1">
+	<choice req="rep_oe_acid" lvl="1">
 		<text>(Positive Acidic Reputation) Accept the discounted offer.</text>
 		<event>
 			<text>You send over your scrap, and shortly thereafter a strange drone with a glass dome teleports onto your ship. It appears that's how Acidic Growth transports itself.</text>
@@ -1929,6 +1929,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	<event load="NEBULA_OE_ACID_WEAPONCACHE" />
 	
 	<event load="NEBULA_OE_ACID_EMPTY_WRECK" />
+	<event load="NEBULA_OE_ACID_WEAPON_TEST" />
 <!--
 	<event load="NEBULA_REFUGEE_OE_ACID" />
 	<event load="NEBULA_ACIDIC_OE_ACID_BADORCHID" />
@@ -2455,7 +2456,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 	<text>You find an Acidic vessel broadcasting the distress signal and contact them. "Outsider. This is our space. Protect, we must." Apparently the Acidic Growth has unexpectedly setup a trap for trespassers here.</text>
 	<ship load="SHIP_OE_ACID_GENERIC" hostile="true" />
 	<environment type="nebula" />
-    <choice hidden="true" req="rep_oe_acid" lvl="-9999" max_lvl="-1">
+    <choice hidden="true" req="rep_oe_acid" lvl="1">
         <text>(Positive Acidic Reputation) Explain that you're friendly with the Acidic Growth.</text>
         <event>
             <ship hostile="false"/>
@@ -3030,7 +3031,7 @@ The Growth transfers over some resources as payment for your data, and while tha
 	</choice>
 </event>
 
-<event name="NEBULA_OE_QUEST_ACID_COALITION">
+<event name="NEBULA_OE_QUEST_ACID_COALITION" unique="true">
 	<environment type="nebula" />
 	<ship load="SHIP_COALITION_ELITE_FIGHT" hostile="false" />
 	<text>A RUES ship is at this beacon. They don't show any signs of hostility.</text>
@@ -3338,14 +3339,14 @@ The Growth transfers over some resources as payment for your data, and while tha
 		<text>Prepare to defend yourself.</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
-	<choice hidden="true" req="rep_oe_acid" lvl="-2" max_lvl="-1">
+	<choice hidden="true" req="rep_oe_acid" lvl="1" max_lvl="2">
 		<text>(Positive Acidic Reputation) Try to appease them by pointing out your good relations.</text>
 		<event>
 			<text>Your pleas seem to work, and the station turns off its weapons. It seems like you'll get no more out of this, but at least you're alive.</text>
 			<ship hostile="false" />
 		</event>
 	</choice>
-	<choice hidden="true" req="rep_oe_acid" lvl="-9999" max_lvl="-3">
+	<choice hidden="true" req="rep_oe_acid" lvl="3">
 		<text>(Great Positive Acidic Reputation) Try to appease them by pointing out your good relations.</text>
 		<event>
 			<text>Your pleas seem to work, and the station turns off its weapons. It seems like they recognized you, finally, and share some scrap as an apology.</text>

@@ -470,7 +470,7 @@
 		<drone name="LIST_DRONES_ACIDIC" />
 	</droneList>
 	<health amount="10" />
-	<maxPower amount="7" />
+	<maxPower amount="18" />
 	<crewCount amount="1" max="4" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -478,11 +478,11 @@
 <shipBlueprint name="OE_COALITION_CEALAFORMER_ELITE" layout="mu_coalition_cealaformer" img="oe_coalition_cealaformer_elite">
 	<class>Elite Coalition Cealaformer</class>
 	<systemList>
-		<artillery power="3" max="3" room="11" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
-		<artillery power="3" max="3" room="12" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
-		<artillery power="3" max="3" room="10" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
-		<artillery power="3" max="3" room="9" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
-		<artillery power="3" max="3" room="13" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
+		<artillery power="3" max="3" room="11" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER_ELITE" />
+		<artillery power="3" max="3" room="12" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER_ELITE" />
+		<artillery power="3" max="3" room="10" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER_ELITE" />
+		<artillery power="3" max="3" room="9" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER_ELITE" />
+		<artillery power="3" max="3" room="13" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER_ELITE" />
 		<cloaking power="2" max="2" room="14" start="true" />
 		<engines power="1" max="1" room="15" start="true" />
 		<medbay power="2" max="2" room="5" start="true" />
