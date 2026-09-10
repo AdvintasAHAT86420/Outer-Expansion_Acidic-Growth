@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FTL>
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_OE_WEAPONS"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_LASTSTAND">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_OE_WEAPONS"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_OE_WEAPONS"/>
+        <mod-append:event name="SYLVAN_OE_LOOT" req="loc_sector_count" lvl="3" />
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT">
+    <mod:findLike type="loadEventList">
+        <mod:findName name="SYLVAN_OE_WEAPONS" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_LASTSTAND">
+    <mod:findLike type="loadEventList">
+        <mod:findName name="SYLVAN_OE_WEAPONS" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT">
+    <mod:findLike type="loadEventList">
+        <mod:findName name="SYLVAN_OE_WEAPONS" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+        <mod:findName name="SYLVAN_OE_LOOT" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+    </mod:findLike>
+</mod:findName>
+
 
 <mod:findName type="event" name="THE_JUDGES_ZOLTAN">
 	<mod-append:choice hidden="true" req="LIST_CREW_OE_ACID" blue="false">
