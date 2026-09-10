@@ -754,6 +754,7 @@ Release a unique form of Acidic Gas into the current room, which lasts 10 second
 	<bossShip yOffset="180">OE_ACID_ASSAULT_ELITE</bossShip>
 	<bossShip yOffset="80">OE_ACID_STATION</bossShip>
 	<bossShip yOffset="80">OE_ACID_STATION_ELITE</bossShip>
+	<bossShip>OE_COALITION_CEALAFORMER_ELITE</bossShip>
 
 	<bossShip>OET_BOSS_ACID_NORMAL</bossShip>
 	<bossShip>OET_BOSS_ACID_CHALLENGE</bossShip>
