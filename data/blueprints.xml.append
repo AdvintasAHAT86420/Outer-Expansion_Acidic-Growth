@@ -1690,7 +1690,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 </crewBlueprint>
 
 <crewBlueprint name="oe_acid_soldier">
-	<desc>Elite Acidic Crew. A mechanical soldier controlled by a fragment of the acidic growth. This design focuses on rebelling boarders and protecting itself.</desc>
+	<desc>Elite Acidic Crew. A mechanical soldier controlled by a fragment of the acidic growth. This design focuses on repelling boarders and protecting itself.</desc>
 	<title>Acidic Soldier</title>
 	<short>Acid Soldier</short>
 	<cost>70</cost>
